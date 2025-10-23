@@ -1,6 +1,7 @@
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
     --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-size-base: 16px;
     --spacing-unit: 8px;
@@ -12,4 +13,24 @@
     color: var(--primary-color);
     margin: 0;
     padding: 0;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: calc(var(--spacing-unit) * 2);
+    margin: auto 0;
+    text-align: right;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 calc(var(--spacing-unit) * 2);
+    font-weight: bold;
+    justify-content: center;
+}
+.navbar a:hover {
+    color: var(--accent-color);
 }
