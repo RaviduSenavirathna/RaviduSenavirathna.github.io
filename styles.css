@@ -1,18 +1,21 @@
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: #e74c3c;
+    --primary-color: #061d12;
+    --secondary-color: #035731;
+    --accent-color: #1ae61e;
+    --h-font-color: #e7ff31;
+    --font-color: #eaf8b3;
     --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-size-base: 16px;
     --spacing-unit: 8px;
 }
 
-.body {
+body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--font-color);
     margin: 0;
-    padding: 0;
+    padding: 15px;
 }
 
 
