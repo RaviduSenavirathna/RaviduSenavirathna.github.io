@@ -87,8 +87,43 @@ section {
 
 .home-content h2 {
     display: inline-block;
-    font-size: 3.2rem;
+    font-size: 3rem;
     margin: -1rem 0;
+}
+
+.home-content h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .07rem var(--accent-color);
+    animation: display 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display {
+    25%,100% {
+      display: none;
+    }
+}
+
+.home-content h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: .2rem solid var(--accent-color);
+    color: var(--accent-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s linear infinite;
+}   
+
+@keyframes typing {
+    0%,100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
 }
 
 .home-content p {
