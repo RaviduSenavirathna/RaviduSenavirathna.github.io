@@ -20,20 +20,47 @@ body {
 
 
 /* Navigation Bar */
-.navbar {
-    background-color: var(--secondary-color);
-    padding: calc(var(--spacing-unit) * 2);
-    margin: auto 0;
-    text-align: right;
-}
+/* ====== NAVBAR ====== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--secondary-color);
+      padding: 10px 40px;
+    }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 calc(var(--spacing-unit) * 2);
-    font-weight: bold;
-    justify-content: center;
-}
-.navbar a:hover {
-    color: var(--accent-color);
-}
+    /* ====== LOGO SECTION ====== */
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    /* ====== NAV LINKS ====== */
+    nav > ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav > ul > li > a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav > ul > li > a:hover {
+      color: var(--accent-color);
+    }
