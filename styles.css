@@ -74,6 +74,17 @@ section {
     background-color: var(--primary-color);
 }
 
+/* Headings */
+.heading {
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.heading span {
+    color: var(--accent-color);
+}
 /* Home */
 #home {
     display: flex;
