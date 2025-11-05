@@ -1,3 +1,4 @@
+// Resume Section Toggle
 const resumeBtn = document.querySelectorAll('.resume-btn');
 
 resumeBtn.forEach(button => {

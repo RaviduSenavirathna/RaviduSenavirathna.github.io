@@ -445,7 +445,8 @@ section {
   transition: background-color 9999s ease-in-out 0s;
 }
 
-  .toast {
+/* Notification */
+.toast {
     visibility: hidden;
     min-width: 280px;
     background-color: var(--primary-color);
@@ -462,22 +463,22 @@ section {
     transform: translateX(100%);
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
+}
 
-  .toast.show {
+.toast.show {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
-  }
+}
 
-  .toast.success {
+.toast.success {
     background-color: #28a745; /* green */
-  }
+}
 
   .toast.error {
     background-color: #dc3545; /* red */
-  }
+}
 
   .toast.info {
     background-color: #007bff; /* blue */
-  }
+}
