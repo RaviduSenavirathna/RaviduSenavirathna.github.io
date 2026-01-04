@@ -71,11 +71,20 @@ nav a.active {
 
 /* Sections */
 section {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     padding: 10rem 9% 2rem;
     background-color: var(--primary-color);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+section.active {
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
 }
 
 /* Headings */
@@ -90,38 +99,38 @@ section {
     color: var(--accent-color);
 }
 /* Home */
-#home {
+.home {
     display: flex;
     align-items: center;
     gap: 5rem;
 }
 
-.home-content h1 {
+.home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
 }
 
-.home-content h2 {
+.home-detail h2 {
     display: inline-block;
-    font-size: 3rem;
-    margin: -1rem 0;
+    font-size: 3.2rem;
+    margin: -1rem;
 }
 
-.home-content h2 span {
+.home-detail h2 span {
     position: relative;
     display: inline-block;
     color: transparent;
     -webkit-text-stroke: .07rem var(--accent-color);
-    animation: display 16s linear infinite;
+    animation: display-text 16s linear infinite;
     animation-delay: calc(-4s * var(--i));
 }
 
-@keyframes display {
+@keyframes display-text {
     25%,100% {
       display: none;
     }
 }
 
-.home-content h2 span::before {
+.home-detail h2 span::before {
     content: attr(data-text);
     position: absolute;
     width: 0;
@@ -129,11 +138,11 @@ section {
     color: var(--accent-color);
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 4s linear infinite;
+    animation: fill-text 4s linear infinite;
 }   
 
-@keyframes typing {
-    0%,100% {
+@keyframes fill-text {
+    10%,100% {
         width: 0;
     }
     70%,90% {
@@ -141,20 +150,17 @@ section {
     }
 }
 
-.home-content p {
+.home-detail p {
     font-size: 1.6rem;
-    color: var(--font-color);
     margin: 1rem 0 2.5rem;
-    max-width: 600px;
 }
 
-.home-buttons {
+.home-detail .btn-sci {
     display: flex;
     align-items: center;
-    gap: 2rem;
 }
 
-.cv-btn {
+.btn {
     display: inline-block;
     padding: 1rem 3rem;
     background: var(--accent-color);
@@ -167,18 +173,18 @@ section {
     transition: .5s;
 }
 
-.cv-btn:hover {
+.btn:hover {
     background: transparent;
     color: var(--accent-color);
     box-shadow: none;
 }
 
 /* Social Icons */
-.social-icons {
+.home-detail .btn-sci .sci {
     margin-left: 2rem;
 }
 
-.social-icons a {
+.home-detail .btn-sci .sci a {
     display: inline-flex;
     padding: .8rem;
     border: .2rem solid var(--accent-color);
@@ -189,20 +195,19 @@ section {
     transition: .5s;
 }
 
-.social-icons a:hover {
+.home-detail .btn-sci .sci a:hover {
     color: var(--primary-color);
-    background-color: var(--accent-color);
+    background: var(--accent-color);
     box-shadow: 0 0 1rem var(--accent-color);
 }
 
 /* Home Image */
 .home-image .img-box {
-    margin-left: 5rem;
     position: relative;
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
-    padding: 1.5rew solid var(--accent-color);
+    padding: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,13 +220,16 @@ section {
     position: absolute;
     width: 50rem;
     height: 50rem;
-    inset: 0;
-    background: conic-gradient(transparent, var(--accent-color));
+    background: conic-gradient(transparent, transparent, transparent, var(--accent-color));
     transform: rotate(0deg);
-    animation: rotate 10s linear infinite;
+    animation: rotate-border 10s linear infinite;
 }
 
-@keyframes rotate {
+.home-image .img-box::after {
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border {
     100% {
         transform: rotate(360deg);
     }
@@ -229,8 +237,8 @@ section {
 
 .home-image .img-box .img-item {
     position: relative;
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
     background: var(--primary-color);
     border-radius: 50%;
     border: .01rem solid var(--primary-color);
