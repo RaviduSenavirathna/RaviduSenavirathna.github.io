@@ -64,6 +64,11 @@ nav a.active {
     color: var(--accent-color);
 }
 
+#menu-icon{
+    font-size: 4rem;
+    display: none;
+}
+
 /* Sections */
 section {
     position: relative;
