@@ -87,17 +87,6 @@ section.active {
     overflow: auto;
 }
 
-/* Headings */
-.heading {
-    font-size: 4.5rem;
-    color: white;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.heading span {
-    color: var(--accent-color);
-}
 /* Home */
 .home {
     display: flex;
@@ -255,6 +244,90 @@ section.active {
     width: 85%;
     object-fit: cover;
     mix-blend-mode: lighten;
+}
+
+
+/* Services Section */
+.heading {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.heading span {
+    color: var(--accent-color);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.services-container .services-box {
+    background: var(--secondary-color);
+    border: .2rem solid var(--secondary-color);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem;
+    transition: .5s;
+}
+
+.services-container .services-box:hover {
+    border-color: var(--accent-color);
+    transform: scale(1.02);
+}
+
+.services-box .icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services-box .icon i {
+    font-size: 4.5rem;
+    transition: .5s;
+}
+
+.services-box:hover .icon :not(a i) {
+    color: var(--accent-color);
+}
+
+.services-box .icon a{
+    display: inline-flex;
+    background: var(--font-color);
+    border-radius: 50%;
+    padding: 1rem;
+    transition: .5s;
+}
+
+.services-box:hover .icon a {
+    background: var(--accent-color);
+}
+
+.services-box .icon a i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    transform: rotate(225deg);
+}
+
+.services-box .icon a:hover i {
+    transform: rotate(180deg);
+}
+
+.services-box h3 {
+    font-size: 3rem;
+    margin: .5rem 0 2rem;
+    transition: .5s;
+}
+
+.services-box:hover h3 {
+    color: var(--accent-color);
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    color: var(--font-color);
+    line-height: 1.6;
 }
 
 /* Resume Section */
