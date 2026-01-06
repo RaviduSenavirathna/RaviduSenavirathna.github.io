@@ -338,17 +338,14 @@ section.active {
 }
 
 .resume-box h2 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
 }
 
 .resume-box p {
     font-size: 1.6rem;
-    color: var(--font-color);
-    margin-top: 1rem;
-    margin-bottom: 2rem;
 }
 
-.resume-box .description {
+.resume-box .desc {
     margin: 2rem 0 2.5rem;
 }
 
@@ -358,7 +355,6 @@ section.active {
     background: var(--secondary-color);
     border: .2rem solid var(--secondary-color);
     font-size: 1.6rem;
-    color: var(--font-color);
     font-weight: 500;
     margin-bottom: 2rem;
     border-radius: .8rem;
@@ -366,7 +362,6 @@ section.active {
 }
 
 .resume-box .resume-btn.active {
-    background: var(--primary-color);
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
@@ -402,7 +397,7 @@ section.active {
 }
 
 .resume-list:hover::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--accent-color);
 }
 
 .resume-list .resume-item{
@@ -416,9 +411,7 @@ section.active {
 }
 
 .resume-item .year {
-    font-size: 1.4rem;
     color: var(--accent-color);
-    margin-bottom: 1rem;
 }
 
 .resume-item h3 {
@@ -440,6 +433,47 @@ section.active {
     background: var(--primary-color);
     border-radius: 50%;
     margin-left: -2rem;
+}
+
+.resume-detail.Skills .resume-list {
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    overflow: visible;
+}
+
+.resume-detail.Skills .resume-item {
+    position: relative;
+    height: auto;
+    align-items: center;
+}
+
+.resume-detail.Skills .resume-item i {
+    font-size: 8.5rem;
+    transition: .5s;
+}
+
+.resume-detail.Skills .resume-item:hover i {
+    color: var(--accent-color);
+}
+
+.resume-detail.Skills .resume-item span {
+    position: absolute;
+    top: 20%;
+    background:  var(--font-color);
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.9);
+    transition: .2s;
+}
+
+.resume-detail.Skills .resume-item:hover span {
+    top: -25%;
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Projects Section */
