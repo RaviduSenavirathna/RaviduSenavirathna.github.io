@@ -476,6 +476,27 @@ section.active {
     transform: scale(1);
 }
 
+.resume-detail.About .resume-list {
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.resume-detail.About .resume-item {
+    height: auto;
+    padding: 0 0 .5rem;
+    background: transparent;
+}
+
+.resume-detail.About .resume-item p {
+    color: var(--accent-color);
+}
+
+.resume-detail.About .resume-item p span {
+    color: var(--font-color);
+    margin-left: 1rem;
+    font-size: 1.8rem;
+}
+
 /* Projects Section */
 .project-container {
     display: grid;
