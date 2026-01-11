@@ -519,6 +519,60 @@ section.active {
     line-height: 1;
 }
 
+.project-box h3 {
+    font-size: 3.5rem;
+    margin: .8rem 0 2rem;
+}
+
+.project-box p {
+    font-size: 1.6rem;
+}
+
+.project-box .tech {
+    margin: 2rem 0;
+    color: var(--accent-color);
+    border-bottom: .1rem solid var(--font-color);
+    padding-bottom: 2rem;
+}
+
+.project-box .live-github a {
+    position: relative;
+    display: inline-flex;
+    padding: 1.3rem;
+    font-size: 3rem;
+    color: var(--font-color);
+    border-radius: 50%;
+    background: var(--secondary-color);
+    transition: .5s;
+}
+
+.project-box .live-github a:hover {
+    color: var(--accent-color);
+}
+
+.project-box .live-github a span {
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    white-space: nowrap;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    background: var(--font-color);
+    color: var(--primary-color);
+    opacity: 0;
+    scale: .9;
+    transition: .2s;
+}
+
+.project-box .live-github a:hover span {
+    top: -70%;
+    opacity: 1;
+    scale: 1;
+}
+
 .heading {
     font-size: 4.5rem;
     text-align: center;
