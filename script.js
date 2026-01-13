@@ -20,16 +20,24 @@ resumeBtn.forEach(button => {
     });
 });
 
+
+
 // Portfolio Section Navigation
-const arrowRight = document.querySelector('.portfolio-box .navigation .arrow-right');
-const arrowLeft = document.querySelector('.portfolio-box .navigation .arrow-left');
+const arrowRight = document.querySelector('.project-box .navigation .arrow-right');
+const arrowLeft = document.querySelector('.project-box .navigation .arrow-left');
 
 let index = 0;
 
 const activePortfolio = () => {
-  const imgSlide = document.querySelector('.portfolio-carousel .img-slide')
+  const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
+  const projectDetails = document.querySelectorAll('.project-details');
 
-  imgSlide.computedStyleMap.transform = 'translateX(calc(${index * -100}% - ${index * 2}rem))';
+  imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
+
+  projectDetails.forEach(detail => {
+    detail.classList.remove('active');
+  });
+  projectDetails[index].classList.add('active');
 }
 
 arrowRight.addEventListener('click', () => {
@@ -55,6 +63,9 @@ arrowLeft.addEventListener('click', () => {
   }
   activePortfolio();
 });
+
+
+
 
 // Contact Form Submission
 const form = document.getElementById('contactForm');
