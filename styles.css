@@ -731,7 +731,7 @@ section.active {
   transition: background-color 9999s ease-in-out 0s;
 }
 
-.contact-box .cv-btn {
+.contact-box .btn {
   margin-top: 2rem;
   width: 100%;
   height: 5.3rem;
@@ -746,7 +746,7 @@ section.active {
   transition: all 0.3s ease;
 }
 
-.contact-box .cv-btn:hover {
+.contact-box .btn:hover {
   background: transparent;
   color: var(--accent-color);
 }
@@ -762,24 +762,6 @@ section.active {
   transition: all 0.3s ease;
 }
 
-.contact-box input::placeholder,
-.contact-box textarea::placeholder {
-  color: #aaa;
-}
-
-.contact-box input:focus,
-.contact-box textarea:focus {
-  border: 1px solid var(--accent-color);
-  box-shadow: 0 0 4px rgba(0, 255, 106, 0.4);
-}
-
-.contact-box input:-webkit-autofill,
-.contact-box textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px var(--primary-color) inset !important;
-  -webkit-text-fill-color: #fff !important;
-  caret-color: #fff;
-  transition: background-color 9999s ease-in-out 0s;
-}
 
 /* Notification */
 .toast {
