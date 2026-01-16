@@ -9,6 +9,7 @@
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
+    color: var(--font-color);
 }
 
 /* Root Variables */
@@ -101,7 +102,6 @@ section.active {
 .home-detail h2 {
     display: inline-block;
     font-size: 3.2rem;
-    margin: -1rem;
 }
 
 .home-detail h2 span {
