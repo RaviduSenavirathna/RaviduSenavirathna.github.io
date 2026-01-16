@@ -1,11 +1,16 @@
 // Navigation Bar Toggale
 const navLinks = document.querySelectorAll('header nav a');
 const logoLink = document.querySelector('header .logo');
+const sections = document.querySelectorAll('section');
 
 const activePage = () => {
   navLinks.forEach(link => {
     link.classList.remove('active');
-  })
+  });
+
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
 }
 
 navLinks.forEach((link, idx) => {
@@ -14,6 +19,8 @@ navLinks.forEach((link, idx) => {
       activePage();
 
       link.classList.add('active');
+
+      sections[idx].classList.add('active');
     }
   });
 });
@@ -23,6 +30,7 @@ logoLink.addEventListener('click', () => {
     activePage();
 
     navLinks[0].classList.add('active');
+    sections[0].classList.add('active');
   }
 });
 
