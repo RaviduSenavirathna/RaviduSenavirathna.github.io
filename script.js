@@ -2,6 +2,13 @@
 const navLinks = document.querySelectorAll('header nav a');
 const logoLink = document.querySelector('header .logo');
 const sections = document.querySelectorAll('section');
+const menuIcon = document.querySelector('#menu-icon');
+const navBar = document.querySelector('header nav');
+
+menuIcon.addEventListener('click', () => {
+  menuIcon.classList.toggle('bx-x');
+  navBar.classList.toggle('active');
+});
 
 const activePage = () => {
   navLinks.forEach(link => {
@@ -11,6 +18,9 @@ const activePage = () => {
   sections.forEach(section => {
     section.classList.remove('active');
   });
+
+  menuIcon.classList.remove('bx-x');
+  navBar.classList.remove('active');
 }
 
 navLinks.forEach((link, idx) => {
