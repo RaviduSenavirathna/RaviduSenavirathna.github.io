@@ -800,3 +800,83 @@ section.active {
   .toast.info {
     background-color: #007bff; /* blue */
 }
+
+/* breakpoints */
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .contact-box .field-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background: var(--primary-color);
+        border-top: .1rem solid rgba(0,0,0,0.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        text-align: center;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 4rem 0;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .home-img .img-box {
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .resume-container,
+    .project-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-container {
+        gap: 3rem;
+    }
+
+    .project-container .project-box:first-child {
+        order: 1;
+    }
+
+    .contact-box .field-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
