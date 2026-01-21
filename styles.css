@@ -35,13 +35,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 2rem 9% 3rem; /* top | left-right | bottom */
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
+
 
 .logo {
     color: var(--accent-color);
@@ -92,7 +93,7 @@ section.active {
 .home {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 15rem;
 }
 
 .home-detail h1 {
@@ -629,7 +630,7 @@ section.active {
 .heading {
     font-size: 4.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .heading span {
