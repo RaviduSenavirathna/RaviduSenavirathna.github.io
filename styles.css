@@ -882,3 +882,56 @@ section.active {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+
+
+.certification-container {
+    position: relative;
+}
+
+.cert-details {
+    display: none;
+    background: var(--secondary-color);
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.cert-details.active {
+    display: block;
+}
+
+.cert-details h3 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.cert-details p {
+    font-size: 1.6rem;
+}
+
+.cert-details span {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+}
+
+/* Navigation */
+.cert-navigation {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.cert-navigation button {
+    display: inline-flex;
+    padding: .4rem;
+    background: var(--secondary-color);
+    border: .2rem solid var(--accent-color);
+    border-radius: .6rem;
+    font-size: 4rem;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.cert-navigation button.disabled {
+    border-color: var(--secondary-color);
+    color: var(--disabled-color);
+}

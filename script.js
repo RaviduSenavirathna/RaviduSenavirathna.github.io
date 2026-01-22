@@ -161,3 +161,38 @@ const form = document.getElementById('contactForm');
       showToast('⚠️ Network error. Please try again later.', 'error');
     }
   });
+
+
+// Certification Slider
+const certItems = document.querySelectorAll('.cert-details');
+const certRight = document.querySelector('.cert-right');
+const certLeft = document.querySelector('.cert-left');
+
+let certIndex = 0;
+
+const activeCertification = () => {
+  certItems.forEach(item => item.classList.remove('active'));
+  certItems[certIndex].classList.add('active');
+};
+
+certRight.addEventListener('click', () => {
+  if (certIndex < certItems.length - 1) {
+    certIndex++;
+    certLeft.classList.remove('disabled');
+  }
+  if (certIndex === certItems.length - 1) {
+    certRight.classList.add('disabled');
+  }
+  activeCertification();
+});
+
+certLeft.addEventListener('click', () => {
+  if (certIndex > 0) {
+    certIndex--;
+    certRight.classList.remove('disabled');
+  }
+  if (certIndex === 0) {
+    certLeft.classList.add('disabled');
+  }
+  activeCertification();
+});
