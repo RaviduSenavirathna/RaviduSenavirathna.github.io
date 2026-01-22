@@ -435,6 +435,33 @@ section.active {
     margin-top: 1rem;
 }
 
+/* Certification Skill Tags */
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.skill-tag {
+    background: var(--primary-color);
+    border: .15rem solid var(--accent-color);
+    color: var(--accent-color);
+    padding: .5rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 .6rem var(--accent-color);
+}
+
+
 /* Navigation buttons */
 .cert-navigation {
     text-align: right;
