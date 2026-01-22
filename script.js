@@ -163,27 +163,27 @@ const form = document.getElementById('contactForm');
   });
 
 
-// Certification Slider
-const certItems = document.querySelectorAll('.cert-details');
+// Certification Slider (Slide Animation)
+const certSlider = document.querySelector('.certification-slider');
+const certSlides = document.querySelectorAll('.cert-slide');
 const certRight = document.querySelector('.cert-right');
 const certLeft = document.querySelector('.cert-left');
 
 let certIndex = 0;
 
-const activeCertification = () => {
-  certItems.forEach(item => item.classList.remove('active'));
-  certItems[certIndex].classList.add('active');
+const updateCertSlider = () => {
+  certSlider.style.transform = `translateX(-${certIndex * 100}%)`;
 };
 
 certRight.addEventListener('click', () => {
-  if (certIndex < certItems.length - 1) {
+  if (certIndex < certSlides.length - 1) {
     certIndex++;
     certLeft.classList.remove('disabled');
   }
-  if (certIndex === certItems.length - 1) {
+  if (certIndex === certSlides.length - 1) {
     certRight.classList.add('disabled');
   }
-  activeCertification();
+  updateCertSlider();
 });
 
 certLeft.addEventListener('click', () => {
@@ -194,5 +194,5 @@ certLeft.addEventListener('click', () => {
   if (certIndex === 0) {
     certLeft.classList.add('disabled');
   }
-  activeCertification();
+  updateCertSlider();
 });
