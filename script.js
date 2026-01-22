@@ -68,50 +68,46 @@ resumeBtn.forEach(button => {
 });
 
 
-
 // Portfolio Section Navigation
 const arrowRight = document.querySelector('.project-box .navigation .arrow-right');
 const arrowLeft = document.querySelector('.project-box .navigation .arrow-left');
+const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
+const projectDetails = document.querySelectorAll('.project-details');
 
 let index = 0;
+const maxIndex = projectDetails.length - 1;
 
 const activePortfolio = () => {
-  const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
-  const projectDetails = document.querySelectorAll('.project-details');
-
+  // Move images
   imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
 
-  projectDetails.forEach(detail => {
-    detail.classList.remove('active');
-  });
+  // Toggle project text
+  projectDetails.forEach(detail => detail.classList.remove('active'));
   projectDetails[index].classList.add('active');
-}
 
+  // Handle button states
+  arrowLeft.classList.toggle('disabled', index === 0);
+  arrowRight.classList.toggle('disabled', index === maxIndex);
+};
+
+// Initial state
+activePortfolio();
+
+// Right arrow
 arrowRight.addEventListener('click', () => {
-  if (index < 4) {
+  if (index < maxIndex) {
     index++;
-    arrowLeft.classList.remove('disabled');
+    activePortfolio();
   }
-  else {
-    index = 5;
-    arrowRight.classList.add('disabled');
-  }
-  activePortfolio();
 });
 
+// Left arrow
 arrowLeft.addEventListener('click', () => {
-  if (index > 1) {
+  if (index > 0) {
     index--;
-    arrowRight.classList.remove('disabled');
+    activePortfolio();
   }
-  else {
-    index = 0;
-    arrowLeft.classList.add('disabled');
-  }
-  activePortfolio();
 });
-
-
 
 
 // Contact Form Submission
