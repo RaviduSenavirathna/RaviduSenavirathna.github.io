@@ -431,10 +431,6 @@ section.active {
     color: var(--accent-color);
 }
 
-.cert-btn {
-    margin-top: 1rem;
-}
-
 /* Navigation buttons */
 .cert-navigation {
     text-align: right;
