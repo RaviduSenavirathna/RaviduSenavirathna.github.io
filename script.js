@@ -192,3 +192,20 @@ certLeft.addEventListener('click', () => {
   }
   updateCertSlider();
 });
+
+
+// Certificate meta text fade loop (Year ↔ Issued By)
+document.querySelectorAll('.cert-slide').forEach(slide => {
+  const year = slide.querySelector('.meta-year');
+  const issuer = slide.querySelector('.meta-issuer');
+
+  if (!year || !issuer) return;
+
+  let showYear = true;
+
+  setInterval(() => {
+    year.classList.toggle('active', showYear);
+    issuer.classList.toggle('active', !showYear);
+    showYear = !showYear;
+  }, 3500);
+});

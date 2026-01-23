@@ -399,6 +399,54 @@ section.active {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+/* Certificate Header Layout */
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.cert-title {
+    font-size: 2.4rem;
+    max-width: 70%;
+}
+
+/* Animated Year / Issuer */
+.cert-meta {
+    position: relative;
+    width: 16rem;
+    height: 2.2rem;
+    text-align: right;
+}
+
+.cert-meta span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+}
+
+.cert-meta span.active {
+    opacity: 1;
+}
+
+/* Certificate Image */
+.cert-image {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.cert-image img {
+    width: 100%;
+    max-width: 460px;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+}
 
 .cert-slide {
     min-width: 100%;
@@ -406,29 +454,6 @@ section.active {
     border-radius: 1rem;
     padding: 3rem;
     text-align: center;
-}
-
-.cert-slide img {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-}
-
-.cert-slide h3 {
-    font-size: 2.6rem;
-    margin-bottom: .5rem;
-}
-
-.cert-slide p {
-    font-size: 1.6rem;
-}
-
-.cert-slide span {
-    display: block;
-    margin: 1rem 0 2rem;
-    color: var(--accent-color);
 }
 
 /* Navigation buttons */
