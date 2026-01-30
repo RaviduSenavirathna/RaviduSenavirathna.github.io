@@ -449,6 +449,7 @@ section.active {
 }
 
 .cert-slide {
+    max-width: 260px;
     min-width: 100%;
     background: var(--secondary-color);
     border-radius: 1rem;
