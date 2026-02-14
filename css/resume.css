@@ -1,0 +1,21 @@
+.resume {
+  padding: 100px 8%;
+}
+
+.resume-buttons {
+  margin: 20px 0;
+}
+
+.resume-btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.resume-detail {
+  display: none;
+}
+
+.resume-detail.active {
+  display: block;
+}

@@ -1,0 +1,10 @@
+.portfolio {
+  padding: 100px 8%;
+}
+
+.project-card {
+  background: var(--secondary);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}

@@ -1,0 +1,16 @@
+.contact {
+  padding: 100px 8%;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+}
