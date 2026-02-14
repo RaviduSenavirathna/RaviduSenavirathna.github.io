@@ -1,529 +1,58 @@
-<!--34.53-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Linked boxicons -->
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- Linked custom css file -->
-  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/home.css">
 
-  <title>Ravidu Senavirathna</title>
+<title>Ravidu Senavirathna | Home</title>
 </head>
 
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <a class="logo" href="#">Ravidu Senavirathna.</a>
+<header>
+  <a class="logo" href="index.html">Ravidu Senavirathna.</a>
 
-    <i class="bx bx-menu" id="menu-icon"></i>
+  <i class="bx bx-menu" id="menu-icon"></i>
 
-    <!-- Navigation Menu -->
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <!-- <a href="#services">Services</a> -->
-      <a href="#resume">Resume</a>
-      <a href="#portfolio">Projects</a>
-      <a href="#contact">Contact</a>  
-    </nav>
-  </header>
+  <nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="portfolio.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
+<section class="home">
+  <div class="home-detail">
+    <h1>Ravidu Senavirathna</h1>
+    <h2>AI Student & Software Developer</h2>
+    <p>Passionate about Data Science, Machine Learning and building impactful software solutions.</p>
 
-  <!-- Home Section -->
-  <section class="home active">
-    <div class="home-detail">
-      <h1>Ravidu Senavirathna</h1>
-      <h2>I am a 
-        <span style="--i:1" data-text="Programmer">Programmer</span>
-        <span style="--i:2" data-text="Data Analyst">Data Analyst</span>
-        <span style="--i:3" data-text="Tech Enthusiast">Tech Enthusiast</span>
-        <span style="--i:4" data-text="Lifelong Learner">Lifelong Learner</span>
-      </h2>
-      <p>Welcome to my personal portfolio website!</p>
+    <div class="btn-sci">
+      <a href="assets/Ravidu_Senavirathna_CV.pdf" target="_blank" class="btn">Download CV</a>
 
-      <div class="btn-sci">
-
-        <!-- Link the CV Here -->
-        <a href="assets/Ravidu_Senavirathna_CV.pdf" target="_blank" class="btn">Download CV</a>
-
-        <div class="sci">
-          <a href="https://github.com/RaviduSenavirathna"><i class='bx bxl-github'></i></a>
-          <a href="https://www.linkedin.com/in/ravidu-senavirathna-3a226a353/"><i class='bx bxl-linkedin'></i></a>
-          <a href="https://discord.com/users/753553575711604827"><i class='bx bxl-discord'></i></a>
-          <a href="mailto:ravidupasan11@gmail.com"><i class='bx bx-envelope-open'></i></a>
-        </div>
+      <div class="sci">
+        <a href="#"><i class='bx bxl-github'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bx-envelope'></i></a>
       </div>
     </div>
+  </div>
 
-    <div class="home-image">
-      <div class="img-box">
-        <div class="img-item">
-          <!-- Home page profile image -->
-          <img src="profile.jpg">
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="home-image">
+    <img src="profile.jpg" alt="Profile">
+  </div>
+</section>
 
-  <!-- Services Section -->
-  <!-- <section class="services">
-    <h2 class="heading">My <span>Services</span></h2>
-    <div class="services-container">
+<footer>
+  <p>&copy; 2025 Ravidu Senavirathna</p>
+</footer>
 
-      <div class="services-box">
-        <div class="icon">
-          <i class='bx bxs-code-alt'></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
-        </div>
-        <h3>Web Development</h3>
-        <p>Creating responsive and user-friendly websites using modern web technologies.</p>
-      </div>
-
-      <div class="services-box">
-        <div class="icon">
-          <i class='bx bxs-code-alt'></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
-        </div>
-        <h3>Web Development</h3>
-        <p>Creating responsive and user-friendly websites using modern web technologies.</p>
-      </div>
-
-      <div class="services-box">
-        <div class="icon">
-          <i class='bx bxs-code-alt'></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
-        </div>
-        <h3>Web Development</h3>
-        <p>Creating responsive and user-friendly websites using modern web technologies.</p>
-      </div>
-
-    </div>
-  </section> -->
-
-  <!-- Resume Section -->
-  <section class="resume">
-    <div class="resume-container">
-      <div class="resume-box">
-        <h2>Why Hire Me?</h2>
-        <p>I am a dedicated and passionate programmer with a strong foundation in computer science and a keen interest in data analysis. My skills include proficiency in multiple programming languages, problem-solving abilities, and a commitment to continuous learning. I am eager to contribute my expertise to innovative projects and collaborate with like-minded professionals.</p>
-        <button class="resume-btn">Experince</button>
-        <button class="resume-btn">Education</button>
-        <button class="resume-btn">Certification</button>
-        <button class="resume-btn">Skills</button>
-        <button class="resume-btn active">About Me</button> 
-      </div>
-
-      <div class="resume-box">
-        
-        <div class="resume-detail Experince">
-          <h2 class="heading">My <span>Experince</span></h2>
-          <p class="desc">desc dummy text.</p>
-          <div class="resume-list">
-            <div class="resume-item">
-              <p class="year">2025 - Present</p>
-              <h3>front end dev</h3>
-              <p class="company">abc 1</p>
-              <p>dumy text</p>
-            </div>
-            <div class="resume-item">
-              <p class="year">2025 - Present</p>
-              <h3>front end dev</h3>
-              <p class="company">abc 1</p>
-              <p>dumy text</p>
-            </div>
-            <div class="resume-item">
-              <p class="year">2025 - Present</p>
-              <h3>front end dev</h3>
-              <p class="company">abc 1</p>
-              <p>dumy text</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="resume-detail Education">
-          <h2 class="heading">My <span>Education</span></h2>
-          <p class="desc">desc dummy text.</p>
-          <div class="resume-list">
-
-            <div class="resume-item">
-              <p class="year">2011 - 2023</p>
-              <h3>School</h3>
-              <p class="company">Lyceum International School - Gampaha</p>
-              <p>ffcvjh dwqgvjdvqj dgqwgdjqv j</p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2023 - 2024</p>
-              <h3>ICT Foundation Program</h3>
-              <p class="company">ACBT / ECU</p>
-              <p>ffcvjh dwqgvjdvqj dgqwgdjqv j</p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2024 - Present</p>
-              <h3>AI Bachelor's Degree</h3>
-              <p class="company">APIIT</p>
-              <p>ffcvjh dwqgvjdvqj dgqwgdjqv j</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="resume-detail Certification">
-          <h2 class="heading">My <span>Certifications</span></h2>
-
-          <div class="certification-wrapper">
-
-            <div class="certification-slider">
-
-              <!-- Certificate 1 -->
-              <div class="cert-slide active">
-                <div class="cert-header">
-                  <h3 class="cert-title">SQL Basics</h3>
-                  <div class="cert-meta">
-                    <span class="meta-year active">2024</span>
-                    <span class="meta-issuer">Issued by HarvardX</span>
-                  </div>
-                </div>
-
-                <div class="cert-image">
-                  <a 
-                    href="https://certificates.cs50.io/5193f70e-a39b-4769-92cd-c0892de90670.pdf?size=letter" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <img src="./certificates/CS50 SQL.png" alt="SQL Certificate">
-                  </a>
-                </div>
-              </div>
-
-
-              <!-- Certificate 2 -->
-              <div class="cert-slide">
-                <div class="cert-header">
-                  <h3 class="cert-title">Python Basics</h3>
-                  <div class="cert-meta">
-                    <span class="meta-year active">2024</span>
-                    <span class="meta-issuer">Issued by HarvardX</span>
-                  </div>
-                </div>
-                <div class="cert-image">
-                  <a 
-                    href="https://cs50.harvard.edu/certificates/287f4402-727a-43d0-ba3a-62766639b2d2.pdf?size=letter" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                  <img src="./certificates/CS50 Python.png" alt="Python Certificate">
-                  </a>
-                </div>
-              </div>
-
-              <!-- Certificate 3 -->
-              <div class="cert-slide">
-                <div class="cert-header">
-                  <h3 class="cert-title">GitHub Basics</h3>
-                  <div class="cert-meta">
-                    <span class="meta-year active">2025</span>
-                    <span class="meta-issuer">Issued by Linkedin</span>
-                  </div>
-                </div>
-                <div class="cert-image">
-                  <a 
-                    href="https://certificates.linkedin.com/5193f70e-a39b-4769-92cd-c0892de90670.pdf?size=letter" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                  <img src="./certificates/Practical GitHub PM.png" alt="GitHub PM Certificate">
-                  </a>
-                </div>
-              </div>
-
-              <!-- Certificate 4 -->
-              <div class="cert-slide">
-                <div class="cert-header">
-                  <h3 class="cert-title">Career Essentials in Data Analysis</h3>
-                  <div class="cert-meta">
-                    <span class="meta-year active">2025</span>
-                    <span class="meta-issuer">Issued by Linkedin and Microsoft</span>
-                  </div>
-                </div>
-                <div class="cert-image">
-                  <a 
-                    href="https://certificates.linkedin.com/5193f70e-a39b-4769-92cd-c0892de90670.pdf?size=letter" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                  <img src="./certificates/Career Essentials in Data Analysis.png" alt="Career Essentials in Data Analysis Certificate">
-                  </a>
-                </div>
-              </div>
-              
-
-            </div>
-
-            <!-- Navigation -->
-            <div class="cert-navigation">
-              <button class="cert-left disabled">
-                <i class="bx bx-chevron-left"></i>
-              </button>
-              <button class="cert-right">
-                <i class="bx bx-chevron-right"></i>
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-
-        <div class="resume-detail Skills">
-          <h2 class="heading">My <span>Skills</span></h2>
-          <p class="desc">desc dummy text.</p>
-          <div class="resume-list">
-            <div class="resume-item">
-              <i class="bx bxl-python"></i>
-              <span>Python</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bx-server"></i>
-              <span>SQL</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-html5"></i>
-              <span>HTML5</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-css3"></i>
-              <span>CSS3</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="resume-detail AboutMe active">
-          <h2 class="heading">About <span>Me</span></h2>
-          <p class="desc">desc dummy text.</p>
-          <div class="resume-list">
-            <div class="resume-item">
-              <p>Name <span>Ravidu Pasan Senavirathna</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Gender <span>Male</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Age <span>19 Years old</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Status <span>Alchole Withdrawel</span></p>
-            </div>
-            <div class="resume-item">
-              <p>City <span>Yakkala</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Nationality <span>Sri Lankan</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Experince <span>Single</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Full Time <span>Not yet</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Phone <span>(+94) 743 440 947</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Email <span>ravidupasan11@gmail.com</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Languages <span>English, Sinhala, Python</span></p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-   <section class="portfolio">
-    <h2 class="heading">Latest <span>Project</span></h2>
-    <div class="project-container">
-      <div class="project-box">
-        
-        <!-- Project Slide -->
-        <div class="project-details active">
-          <p class="numb">01</p>
-          <h3>Topic</h3>
-          <p>dumy text</p>
-          <div class="tech">
-            <p>Techs used</p>
-          </div>
-          <div class="live-github">     
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
-          </div>
-        </div>
-
-        <div class="project-details">
-          <p class="numb">02</p>
-          <h3>Topic</h3>
-          <p>dumy text</p>
-          <div class="tech">
-            <p>Techs used</p>
-          </div>
-          <div class="live-github">     
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
-          </div>
-        </div>
-
-        <div class="project-details">
-          <p class="numb">03</p>
-          <h3>Topic</h3>
-          <p>dumy text</p>
-          <div class="tech">
-            <p>Techs used</p>
-          </div>
-          <div class="live-github">     
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
-          </div>
-        </div>
-
-        <div class="project-details">
-          <p class="numb">04</p>
-          <h3>Topic</h3>
-          <p>dumy text</p>
-          <div class="tech">
-            <p>Techs used</p>
-          </div>
-          <div class="live-github">     
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
-          </div>
-        </div>
-
-        <div class="project-details">
-          <p class="numb">05</p>
-          <h3>Topic</h3>
-          <p>dumy text</p>
-          <div class="tech">
-            <p>Techs used</p>
-          </div>
-          <div class="live-github">     
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
-          </div>
-        </div>
-
-        <div class="project-details">
-          <p class="numb">06</p>
-          <h3>Topic</h3>
-          <p>dumy text</p>
-          <div class="tech">
-            <p>Techs used</p>
-          </div>
-          <div class="live-github">     
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
-          </div>
-        </div>
-        
-        
-      </div>
-
-      <div class="project-box">
-        <!-- Images for projects -->
-        <div class="portfolio-carousel">
-          <div class="img-slide">
-
-            <!-- Image location -->
-            <div class="img-item">
-              <img src="">
-            </div>
-            <div class="img-item">
-              <img src="">
-            </div>
-            <div class="img-item">
-              <img src="">
-            </div>
-            <div class="img-item">
-              <img src="">
-            </div>
-            <div class="img-item">
-              <img src="">
-            </div>
-            <div class="img-item">
-              <img src="">
-            </div>
-            
-
-          </div>
-        </div>
-
-        <div class="navigation">
-          <button class="arrow-left disabled"><i class="bx bx-chevron-left"></i></button>
-          <button class="arrow-right"><i class="bx bx-chevron-right"></i></button>
-        </div>
-      </div>
-    </div>
-   </section>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <div class="contact-container">
-      <div class="contact-box">
-        <h2>Let's Work Together</h2>
-        <p class="desc">contact description dummy text.</p>
-
-        <div class="contact-detail">
-          <i class="bx bxs-phone"></i>
-          <div class="detail">
-            <p>Phone</p>
-            <p>(+94) 74 344 0947</p>
-          </div>
-        </div>
-
-        <div class="contact-detail">
-          <i class="bx bxs-envelope"></i>
-          <div class="detail">
-            <p>Email</p>
-            <p>ravidupasan11@gmail.com</p>
-          </div>
-        </div>
-
-        <div class="contact-detail">
-          <i class="bx bxs-map"></i>
-          <div class="detail">
-            <p>Address</p>
-            <p>107/05/01 Aluthgama, Bogamuwa, Yakkala</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-box">
-        <form id="contactForm">
-          <h2 class="heading">Contact <span>Me</span></h2>
-          <div class="field-box">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="text" name="phone" placeholder="Phone Number" required>
-            <input type="text" name="subject" placeholder="Email Subject" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-          </div>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="toast"></div>
-  </section>
-
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Ravidu Pasan Senavirathna. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="js/main.js"></script>
 </body>
-
 </html>
