@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Linked boxicons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/home.css">
+  <!-- Linked custom css file -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/home.css">
 
-<title>Ravidu Senavirathna | Home</title>
+  <title>Ravidu Senavirathna</title>
 </head>
 
 <body>
 
-<header>
-  <a class="logo" href="index.html">Ravidu Senavirathna.</a>
+  <!-- Header Section -->
+  <header>
+    <a class="logo" href="#">Ravidu Senavirathna.</a>
 
-  <i class="bx bx-menu" id="menu-icon"></i>
+    <i class="bx bx-menu" id="menu-icon"></i>
 
-  <nav class="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#resume">Resume</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#contact">Contact</a>  
+    </nav>
+  </header>
 
-<section class="home">
-  <div class="home-detail">
-    <h1>Ravidu Senavirathna</h1>
-    <h2>AI Student & Software Developer</h2>
-    <p>Passionate about Data Science, Machine Learning and building impactful software solutions.</p>
 
-    <div class="btn-sci">
-      <a href="assets/Ravidu_Senavirathna_CV.pdf" target="_blank" class="btn">Download CV</a>
+  <!-- Home Section -->
+  <section class="home active">
+    <div class="home-detail">
+      <h1>Ravidu Senavirathna</h1>
+      <h2>I am a 
+        <span style="--i:1" data-text="Programmer">Programmer</span>
+        <span style="--i:2" data-text="Data Analyst">Data Analyst</span>
+        <span style="--i:3" data-text="Tech Enthusiast">Tech Enthusiast</span>
+        <span style="--i:4" data-text="Lifelong Learner">Lifelong Learner</span>
+      </h2>
+      <p>Welcome to my personal portfolio website!</p>
 
-      <div class="sci">
-        <a href="#"><i class='bx bxl-github'></i></a>
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-        <a href="#"><i class='bx bx-envelope'></i></a>
+      <div class="btn-sci">
+
+        <!-- Link the CV Here -->
+        <a href="assets/Ravidu_Senavirathna_CV.pdf" target="_blank" class="btn">Download CV</a>
+
+        <div class="sci">
+          <a href="https://github.com/RaviduSenavirathna"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/ravidu-senavirathna-3a226a353/"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://discord.com/users/753553575711604827"><i class='bx bxl-discord'></i></a>
+          <a href="mailto:ravidupasan11@gmail.com"><i class='bx bx-envelope-open'></i></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="home-image">
-    <img src="profile.jpg" alt="Profile">
-  </div>
-</section>
+    <div class="home-image">
+      <div class="img-box">
+        <div class="img-item">
+          <!-- Home page profile image -->
+          <img src="profile.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Ravidu Senavirathna</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ravidu Pasan Senavirathna. All rights reserved.</p>
+  </footer>
 
-<script src="js/main.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>
