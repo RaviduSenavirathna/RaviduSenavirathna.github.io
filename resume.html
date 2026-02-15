@@ -1,63 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Linked boxicons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/resume.css">
+  <!-- Linked custom css file -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/resume.css">
 
-<title>Resume | Ravidu Senavirathna</title>
+  <title>Ravidu Senavirathna</title>
 </head>
 
 <body>
 
-<header>
-  <a class="logo" href="index.html">Ravidu Senavirathna.</a>
-  <i class="bx bx-menu" id="menu-icon"></i>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="resume.html" class="active">Resume</a>
-    <a href="portfolio.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <!-- Header Section -->
+  <header>
+    <a class="logo" href="#">Ravidu Senavirathna.</a>
 
-<section class="resume">
-  <h2 class="heading">My Resume</h2>
+    <i class="bx bx-menu" id="menu-icon"></i>
 
-  <div class="resume-buttons">
-    <button class="resume-btn active" data-target="experience">Experience</button>
-    <button class="resume-btn" data-target="education">Education</button>
-    <button class="resume-btn" data-target="skills">Skills</button>
-  </div>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#resume">Resume</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#contact">Contact</a>  
+    </nav>
+  </header>
 
-  <div class="resume-content">
+  <!-- Resume Section -->
+  <section class="resume">
+    <div class="resume-container">
+      <div class="resume-box">
+        <h2>Why Hire Me?</h2>
+        <p>I am a dedicated and passionate programmer with a strong foundation in computer science and a keen interest in data analysis. My skills include proficiency in multiple programming languages, problem-solving abilities, and a commitment to continuous learning. I am eager to contribute my expertise to innovative projects and collaborate with like-minded professionals.</p>
+        <button class="resume-btn">Experince</button>
+        <button class="resume-btn">Education</button>
+        <button class="resume-btn">Certification</button>
+        <button class="resume-btn">Skills</button>
+        <button class="resume-btn active">About Me</button> 
+      </div>
 
-    <div class="resume-detail active" id="experience">
-      <h3>Frontend Developer</h3>
-      <p>Company ABC - 2025</p>
+      <div class="resume-box">
+        
+        <div class="resume-detail Experince">
+          <h2 class="heading">My <span>Experince</span></h2>
+          <p class="desc">desc dummy text.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <p class="year">2025 - Present</p>
+              <h3>front end dev</h3>
+              <p class="company">abc 1</p>
+              <p>dumy text</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2025 - Present</p>
+              <h3>front end dev</h3>
+              <p class="company">abc 1</p>
+              <p>dumy text</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2025 - Present</p>
+              <h3>front end dev</h3>
+              <p class="company">abc 1</p>
+              <p>dumy text</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-detail Education">
+          <h2 class="heading">My <span>Education</span></h2>
+          <p class="desc">desc dummy text.</p>
+          <div class="resume-list">
+
+            <div class="resume-item">
+              <p class="year">2011 - 2023</p>
+              <h3>School</h3>
+              <p class="company">Lyceum International School - Gampaha</p>
+              <p>ffcvjh dwqgvjdvqj dgqwgdjqv j</p>
+            </div>
+
+            <div class="resume-item">
+              <p class="year">2023 - 2024</p>
+              <h3>ICT Foundation Program</h3>
+              <p class="company">ACBT / ECU</p>
+              <p>ffcvjh dwqgvjdvqj dgqwgdjqv j</p>
+            </div>
+
+            <div class="resume-item">
+              <p class="year">2024 - Present</p>
+              <h3>AI Bachelor's Degree</h3>
+              <p class="company">APIIT</p>
+              <p>ffcvjh dwqgvjdvqj dgqwgdjqv j</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-detail Certification">
+          <h2 class="heading">My <span>Certifications</span></h2>
+
+          <div class="certification-wrapper">
+
+            <div class="certification-slider">
+
+              <!-- Certificate 1 -->
+              <div class="cert-slide active">
+                <div class="cert-header">
+                  <h3 class="cert-title">SQL Basics</h3>
+                  <div class="cert-meta">
+                    <span class="meta-year active">2024</span>
+                    <span class="meta-issuer">Issued by HarvardX</span>
+                  </div>
+                </div>
+
+                <div class="cert-image">
+                  <a 
+                    href="https://certificates.cs50.io/5193f70e-a39b-4769-92cd-c0892de90670.pdf?size=letter" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./certificates/CS50 SQL.png" alt="SQL Certificate">
+                  </a>
+                </div>
+              </div>
+
+
+              <!-- Certificate 2 -->
+              <div class="cert-slide">
+                <div class="cert-header">
+                  <h3 class="cert-title">Python Basics</h3>
+                  <div class="cert-meta">
+                    <span class="meta-year active">2024</span>
+                    <span class="meta-issuer">Issued by HarvardX</span>
+                  </div>
+                </div>
+                <div class="cert-image">
+                  <a 
+                    href="https://cs50.harvard.edu/certificates/287f4402-727a-43d0-ba3a-62766639b2d2.pdf?size=letter" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                  <img src="./certificates/CS50 Python.png" alt="Python Certificate">
+                  </a>
+                </div>
+              </div>
+
+              <!-- Certificate 3 -->
+              <div class="cert-slide">
+                <div class="cert-header">
+                  <h3 class="cert-title">GitHub Basics</h3>
+                  <div class="cert-meta">
+                    <span class="meta-year active">2025</span>
+                    <span class="meta-issuer">Issued by Linkedin</span>
+                  </div>
+                </div>
+                <div class="cert-image">
+                  <a 
+                    href="https://certificates.linkedin.com/5193f70e-a39b-4769-92cd-c0892de90670.pdf?size=letter" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                  <img src="./certificates/Practical GitHub PM.png" alt="GitHub PM Certificate">
+                  </a>
+                </div>
+              </div>
+
+              <!-- Certificate 4 -->
+              <div class="cert-slide">
+                <div class="cert-header">
+                  <h3 class="cert-title">Career Essentials in Data Analysis</h3>
+                  <div class="cert-meta">
+                    <span class="meta-year active">2025</span>
+                    <span class="meta-issuer">Issued by Linkedin and Microsoft</span>
+                  </div>
+                </div>
+                <div class="cert-image">
+                  <a 
+                    href="https://certificates.linkedin.com/5193f70e-a39b-4769-92cd-c0892de90670.pdf?size=letter" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                  <img src="./certificates/Career Essentials in Data Analysis.png" alt="Career Essentials in Data Analysis Certificate">
+                  </a>
+                </div>
+              </div>
+              
+
+            </div>
+
+            <!-- Navigation -->
+            <div class="cert-navigation">
+              <button class="cert-left disabled">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button class="cert-right">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="resume-detail Skills">
+          <h2 class="heading">My <span>Skills</span></h2>
+          <p class="desc">desc dummy text.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <i class="bx bxl-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bx-server"></i>
+              <span>SQL</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-html5"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-css3"></i>
+              <span>CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-detail AboutMe active">
+          <h2 class="heading">About <span>Me</span></h2>
+          <p class="desc">desc dummy text.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <p>Name <span>Ravidu Pasan Senavirathna</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Gender <span>Male</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Age <span>19 Years old</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Status <span>Alchole Withdrawel</span></p>
+            </div>
+            <div class="resume-item">
+              <p>City <span>Yakkala</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Nationality <span>Sri Lankan</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Experince <span>Single</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Full Time <span>Not yet</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Phone <span>(+94) 743 440 947</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Email <span>ravidupasan11@gmail.com</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Languages <span>English, Sinhala, Python</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="resume-detail" id="education">
-      <h3>AI Bachelor's Degree</h3>
-      <p>APIIT - Present</p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ravidu Pasan Senavirathna. All rights reserved.</p>
+  </footer>
 
-    <div class="resume-detail" id="skills">
-      <p>Python | SQL | HTML | CSS | JavaScript</p>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 Ravidu Senavirathna</p>
-</footer>
-
-<script src="js/main.js"></script>
-<script src="js/resume.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>
