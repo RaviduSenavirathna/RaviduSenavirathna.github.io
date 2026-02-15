@@ -1,46 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Linked boxicons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/contact.css">
+  <!-- Linked custom css file -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/contact.css">
 
-<title>Contact | Ravidu Senavirathna</title>
+  <title>Ravidu Senavirathna</title>
 </head>
 
 <body>
 
-<header>
-  <a class="logo" href="index.html">Ravidu Senavirathna.</a>
-  <i class="bx bx-menu" id="menu-icon"></i>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Projects</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-</header>
+  <!-- Header Section -->
+  <header>
+    <a class="logo" href="#">Ravidu Senavirathna.</a>
 
-<section class="contact">
-  <h2 class="heading">Contact Me</h2>
+    <i class="bx bx-menu" id="menu-icon"></i>
 
-  <form id="contactForm">
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#resume">Resume</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#contact">Contact</a>  
+    </nav>
+  </header>
 
-<footer>
-  <p>&copy; 2025 Ravidu Senavirathna</p>
-</footer>
 
-<script src="js/main.js"></script>
-<script src="js/contact.js"></script>
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <div class="contact-box">
+        <h2>Let's Work Together</h2>
+        <p class="desc">contact description dummy text.</p>
+
+        <div class="contact-detail">
+          <i class="bx bxs-phone"></i>
+          <div class="detail">
+            <p>Phone</p>
+            <p>(+94) 74 344 0947</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <i class="bx bxs-envelope"></i>
+          <div class="detail">
+            <p>Email</p>
+            <p>ravidupasan11@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <i class="bx bxs-map"></i>
+          <div class="detail">
+            <p>Address</p>
+            <p>107/05/01 Aluthgama, Bogamuwa, Yakkala</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <form id="contactForm">
+          <h2 class="heading">Contact <span>Me</span></h2>
+          <div class="field-box">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="subject" placeholder="Email Subject" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ravidu Pasan Senavirathna. All rights reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>
