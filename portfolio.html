@@ -1,46 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Linked boxicons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/portfolio.css">
+  <!-- Linked custom css file -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/home.css">
 
-<title>Projects | Ravidu Senavirathna</title>
+  <title>Ravidu Senavirathna</title>
 </head>
 
 <body>
 
-<header>
-  <a class="logo" href="index.html">Ravidu Senavirathna.</a>
-  <i class="bx bx-menu" id="menu-icon"></i>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html" class="active">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <!-- Header Section -->
+  <header>
+    <a class="logo" href="#">Ravidu Senavirathna.</a>
 
-<section class="portfolio">
-  <h2 class="heading">My Projects</h2>
+    <i class="bx bx-menu" id="menu-icon"></i>
 
-  <div class="project-card">
-    <h3>Data Structures Visualizer</h3>
-    <p>Interactive DSA learning tool built with Python.</p>
-    <a href="#" class="btn">GitHub</a>
-  </div>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#resume">Resume</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#contact">Contact</a>  
+    </nav>
+  </header>
 
-</section>
 
-<footer>
-  <p>&copy; 2025 Ravidu Senavirathna</p>
-</footer>
+  <!-- Projects Section -->
+   <section class="portfolio">
+    <h2 class="heading">Latest <span>Project</span></h2>
+    <div class="project-container">
+      <div class="project-box">
+        
+        <!-- Project Slide -->
+        <div class="project-details active">
+          <p class="numb">01</p>
+          <h3>Topic</h3>
+          <p>dumy text</p>
+          <div class="tech">
+            <p>Techs used</p>
+          </div>
+          <div class="live-github">     
+            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
+          </div>
+        </div>
 
-<script src="js/main.js"></script>
-<script src="js/portfolio.js"></script>
+        <div class="project-details">
+          <p class="numb">02</p>
+          <h3>Topic</h3>
+          <p>dumy text</p>
+          <div class="tech">
+            <p>Techs used</p>
+          </div>
+          <div class="live-github">     
+            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
+          </div>
+        </div>
+
+        <div class="project-details">
+          <p class="numb">03</p>
+          <h3>Topic</h3>
+          <p>dumy text</p>
+          <div class="tech">
+            <p>Techs used</p>
+          </div>
+          <div class="live-github">     
+            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
+          </div>
+        </div>
+
+        <div class="project-details">
+          <p class="numb">04</p>
+          <h3>Topic</h3>
+          <p>dumy text</p>
+          <div class="tech">
+            <p>Techs used</p>
+          </div>
+          <div class="live-github">     
+            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
+          </div>
+        </div>
+
+        <div class="project-details">
+          <p class="numb">05</p>
+          <h3>Topic</h3>
+          <p>dumy text</p>
+          <div class="tech">
+            <p>Techs used</p>
+          </div>
+          <div class="live-github">     
+            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
+          </div>
+        </div>
+
+        <div class="project-details">
+          <p class="numb">06</p>
+          <h3>Topic</h3>
+          <p>dumy text</p>
+          <div class="tech">
+            <p>Techs used</p>
+          </div>
+          <div class="live-github">     
+            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>      
+          </div>
+        </div>
+        
+        
+      </div>
+
+      <div class="project-box">
+        <!-- Images for projects -->
+        <div class="portfolio-carousel">
+          <div class="img-slide">
+
+            <!-- Image location -->
+            <div class="img-item">
+              <img src="">
+            </div>
+            <div class="img-item">
+              <img src="">
+            </div>
+            <div class="img-item">
+              <img src="">
+            </div>
+            <div class="img-item">
+              <img src="">
+            </div>
+            <div class="img-item">
+              <img src="">
+            </div>
+            <div class="img-item">
+              <img src="">
+            </div>
+            
+
+          </div>
+        </div>
+
+        <div class="navigation">
+          <button class="arrow-left disabled"><i class="bx bx-chevron-left"></i></button>
+          <button class="arrow-right"><i class="bx bx-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ravidu Pasan Senavirathna. All rights reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>
