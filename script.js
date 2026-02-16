@@ -1,211 +1,232 @@
-// Navigation Bar Toggale
-const navLinks = document.querySelectorAll('header nav a');
-const logoLink = document.querySelector('header .logo');
-const sections = document.querySelectorAll('section');
-const menuIcon = document.querySelector('#menu-icon');
-const navBar = document.querySelector('header nav');
+document.addEventListener('DOMContentLoaded', () => {
 
-menuIcon.addEventListener('click', () => {
-  menuIcon.classList.toggle('bx-x');
-  navBar.classList.toggle('active');
-});
+  /* ===============================
+     NAVIGATION TOGGLE
+  =============================== */
 
-const activePage = () => {
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-  });
+  const initNavigation = () => {
+    const menuIcon = document.querySelector('#menu-icon');
+    const navBar = document.querySelector('header nav');
 
-  sections.forEach(section => {
-    section.classList.remove('active');
-  });
+    if (!menuIcon || !navBar) return;
 
-  menuIcon.classList.remove('bx-x');
-  navBar.classList.remove('active');
-}
-
-navLinks.forEach((link, idx) => {
-  link.addEventListener('click', () => {
-    if (!link.classList.contains('active')) {
-      activePage();
-
-      link.classList.add('active');
-
-      sections[idx].classList.add('active');
-    }
-  });
-});
-
-logoLink.addEventListener('click', () => {
-  if (!navLinks[0].classList.contains('active')) {
-    activePage();
-
-    navLinks[0].classList.add('active');
-    sections[0].classList.add('active');
-  }
-});
+    menuIcon.addEventListener('click', () => {
+      menuIcon.classList.toggle('bx-x');
+      navBar.classList.toggle('active');
+    });
+  };
 
 
-// Resume Section Toggle
-const resumeBtn = document.querySelectorAll('.resume-btn');
+  /* ===============================
+     RESUME SECTION TOGGLE
+  =============================== */
 
-resumeBtn.forEach(button => {
-    button.addEventListener('click', () => {
-        const resumeDetail = document.querySelectorAll('.resume-detail');
-        const btnText = button.textContent;
+  const initResumeToggle = () => {
+    const resumeBtns = document.querySelectorAll('.resume-btn');
+    const resumeDetails = document.querySelectorAll('.resume-detail');
 
-        resumeBtn.forEach(btn => {
-            btn.classList.remove('active');
-        });
+    if (!resumeBtns.length || !resumeDetails.length) return;
+
+    resumeBtns.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetClass = button.textContent.replace(/\s+/g, '');
+
+        resumeBtns.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
-        resumeDetail.forEach(detail => {
-            detail.classList.remove('active');
-            if(detail.classList.contains(btnText.replace(/\s+/g, ''))) {
-                detail.classList.add('active');
-            }
+        resumeDetails.forEach(detail => {
+          detail.classList.remove('active');
+          if (detail.classList.contains(targetClass)) {
+            detail.classList.add('active');
+          }
         });
+      });
     });
-});
+  };
 
 
-// Portfolio Section Navigation
-const arrowRight = document.querySelector('.project-box .navigation .arrow-right');
-const arrowLeft = document.querySelector('.project-box .navigation .arrow-left');
-const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
-const projectDetails = document.querySelectorAll('.project-details');
+  /* ===============================
+     PORTFOLIO SLIDER
+  =============================== */
 
-let index = 0;
-const maxIndex = projectDetails.length - 1;
+  const initPortfolioSlider = () => {
+    const arrowRight = document.querySelector('.project-box .navigation .arrow-right');
+    const arrowLeft = document.querySelector('.project-box .navigation .arrow-left');
+    const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
+    const projectDetails = document.querySelectorAll('.project-details');
 
-const activePortfolio = () => {
-  // Move images
-  imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
+    if (!arrowRight || !arrowLeft || !imgSlide || !projectDetails.length) return;
 
-  // Toggle project text
-  projectDetails.forEach(detail => detail.classList.remove('active'));
-  projectDetails[index].classList.add('active');
+    let index = 0;
+    const maxIndex = projectDetails.length - 1;
 
-  // Handle button states
-  arrowLeft.classList.toggle('disabled', index === 0);
-  arrowRight.classList.toggle('disabled', index === maxIndex);
-};
+    const updateSlider = () => {
+      imgSlide.style.transform =
+        `translateX(calc(${index * -100}% - ${index * 2}rem))`;
 
-// Initial state
-activePortfolio();
+      projectDetails.forEach(detail =>
+        detail.classList.remove('active')
+      );
+      projectDetails[index].classList.add('active');
 
-// Right arrow
-arrowRight.addEventListener('click', () => {
-  if (index < maxIndex) {
-    index++;
-    activePortfolio();
-  }
-});
-
-// Left arrow
-arrowLeft.addEventListener('click', () => {
-  if (index > 0) {
-    index--;
-    activePortfolio();
-  }
-});
-
-
-// Contact Form Submission
-const form = document.getElementById('contactForm');
-  const toast = document.getElementById('toast');
-
-  function showToast(message, type = 'success') {
-    toast.textContent = message;
-    toast.className = 'toast show ' + type;
-
-    // Auto-hide after 5 seconds
-    setTimeout(() => {
-      toast.className = 'toast';
-    }, 5000);
-  }
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      phone: form.phone.value,
-      subject: form.subject.value,
-      message: form.message.value
+      arrowLeft.classList.toggle('disabled', index === 0);
+      arrowRight.classList.toggle('disabled', index === maxIndex);
     };
 
-    showToast('📤 Sending...', 'info');
+    updateSlider();
 
-    try {
-      const response = await fetch('https://formspree.io/f/xanlajkn', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        showToast('✅ Message sent successfully!', 'success');
-        form.reset();
-      } else {
-        showToast('❌ Failed to send message. Please try again.', 'error');
+    arrowRight.addEventListener('click', () => {
+      if (index < maxIndex) {
+        index++;
+        updateSlider();
       }
-    } catch (error) {
-      showToast('⚠️ Network error. Please try again later.', 'error');
-    }
-  });
+    });
+
+    arrowLeft.addEventListener('click', () => {
+      if (index > 0) {
+        index--;
+        updateSlider();
+      }
+    });
+  };
 
 
-// Certification Slider (Slide Animation)
-const certSlider = document.querySelector('.certification-slider');
-const certSlides = document.querySelectorAll('.cert-slide');
-const certRight = document.querySelector('.cert-right');
-const certLeft = document.querySelector('.cert-left');
+  /* ===============================
+     CERTIFICATION SLIDER
+  =============================== */
 
-let certIndex = 0;
+  const initCertificationSlider = () => {
+    const certSlider = document.querySelector('.certification-slider');
+    const certSlides = document.querySelectorAll('.cert-slide');
+    const certRight = document.querySelector('.cert-right');
+    const certLeft = document.querySelector('.cert-left');
 
-const updateCertSlider = () => {
-  certSlider.style.transform = `translateX(-${certIndex * 100}%)`;
-};
+    if (!certSlider || !certSlides.length || !certRight || !certLeft) return;
 
-certRight.addEventListener('click', () => {
-  if (certIndex < certSlides.length - 1) {
-    certIndex++;
-    certLeft.classList.remove('disabled');
-  }
-  if (certIndex === certSlides.length - 1) {
-    certRight.classList.add('disabled');
-  }
-  updateCertSlider();
-});
+    let certIndex = 0;
 
-certLeft.addEventListener('click', () => {
-  if (certIndex > 0) {
-    certIndex--;
-    certRight.classList.remove('disabled');
-  }
-  if (certIndex === 0) {
-    certLeft.classList.add('disabled');
-  }
-  updateCertSlider();
-});
+    const updateCertSlider = () => {
+      certSlider.style.transform =
+        `translateX(-${certIndex * 100}%)`;
+
+      certLeft.classList.toggle('disabled', certIndex === 0);
+      certRight.classList.toggle(
+        'disabled',
+        certIndex === certSlides.length - 1
+      );
+    };
+
+    updateCertSlider();
+
+    certRight.addEventListener('click', () => {
+      if (certIndex < certSlides.length - 1) {
+        certIndex++;
+        updateCertSlider();
+      }
+    });
+
+    certLeft.addEventListener('click', () => {
+      if (certIndex > 0) {
+        certIndex--;
+        updateCertSlider();
+      }
+    });
+  };
 
 
-// Certificate meta text fade loop (Year ↔ Issued By)
-document.querySelectorAll('.cert-slide').forEach(slide => {
-  const year = slide.querySelector('.meta-year');
-  const issuer = slide.querySelector('.meta-issuer');
+  /* ===============================
+     CERT META FADE LOOP
+  =============================== */
 
-  if (!year || !issuer) return;
+  const initCertMetaAnimation = () => {
+    const slides = document.querySelectorAll('.cert-slide');
 
-  let showYear = true;
+    if (!slides.length) return;
 
-  setInterval(() => {
-    year.classList.toggle('active', showYear);
-    issuer.classList.toggle('active', !showYear);
-    showYear = !showYear;
-  }, 3500);
+    slides.forEach(slide => {
+      const year = slide.querySelector('.meta-year');
+      const issuer = slide.querySelector('.meta-issuer');
+
+      if (!year || !issuer) return;
+
+      let showYear = true;
+
+      setInterval(() => {
+        year.classList.toggle('active', showYear);
+        issuer.classList.toggle('active', !showYear);
+        showYear = !showYear;
+      }, 3500);
+    });
+  };
+
+
+  /* ===============================
+     CONTACT FORM
+  =============================== */
+
+  const initContactForm = () => {
+    const form = document.getElementById('contactForm');
+    const toast = document.getElementById('toast');
+
+    if (!form || !toast) return;
+
+    const showToast = (message, type = 'success') => {
+      toast.textContent = message;
+      toast.className = 'toast show ' + type;
+
+      setTimeout(() => {
+        toast.className = 'toast';
+      }, 5000);
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        subject: form.subject.value,
+        message: form.message.value
+      };
+
+      showToast('📤 Sending...', 'info');
+
+      try {
+        const response = await fetch(
+          'https://formspree.io/f/xanlajkn',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          }
+        );
+
+        if (response.ok) {
+          showToast('✅ Message sent successfully!', 'success');
+          form.reset();
+        } else {
+          showToast('❌ Failed to send message.', 'error');
+        }
+      } catch {
+        showToast('⚠️ Network error.', 'error');
+      }
+    });
+  };
+
+
+  /* ===============================
+     INITIALIZE EVERYTHING
+  =============================== */
+
+  initNavigation();
+  initResumeToggle();
+  initPortfolioSlider();
+  initCertificationSlider();
+  initCertMetaAnimation();
+  initContactForm();
+
 });
