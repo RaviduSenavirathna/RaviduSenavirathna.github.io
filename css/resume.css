@@ -50,10 +50,9 @@
 
 .resume-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Force 3 equal columns */
     gap: 2rem;
-    height: 45rem;
-    overflow: auto;
+    align-items: stretch;
 }
 
 /* Certification Slider */
@@ -159,14 +158,14 @@
     background: var(--accent-color);
 }
 
-.resume-list .resume-item{
+.resume-list .resume-item {
     background: var(--secondary-color);
     border-radius: .8rem;
     padding: 3rem 2.5rem;
-    height: calc((45rem - 2rem)/ 2);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    height: 100%; /* makes all cards equal height */
 }
 
 .resume-item .year {
@@ -179,19 +178,7 @@
 
 .resume-item .company {
     position: relative;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-}
-
-.resume-item .company::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: .5rem;
-    background: var(--primary-color);
-    border-radius: 50%;
-    margin-left: -2rem;
+    margin-bottom: 1rem;
 }
 
 .resume-detail.Skills .resume-list {
