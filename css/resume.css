@@ -63,8 +63,10 @@
 
 .certification-slider {
     display: flex;
+    min-height: 55rem;
     transition: transform 0.5s ease-in-out;
 }
+
 /* Certificate Header Layout */
 .cert-header {
     display: flex;
@@ -104,18 +106,22 @@
 .cert-image {
     display: flex;
     justify-content: center;
-    margin: 2.5rem 0;
+    align-items: center;
+    margin: 3rem 0;
+    height: 45rem; /* gives image more vertical space */
 }
 
 .cert-image img {
     width: 100%;
-    max-width: 460px;
+    max-width: 60rem;   /* much larger */
+    height: 100%;
+    object-fit: contain; /* keeps aspect ratio clean */
     border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    box-shadow: 0 0 2rem rgba(0,0,0,0.4);
 }
 
 .cert-slide {
-    max-width: 260px;
+    max-width: 20rem;
     min-width: 100%;
     background: var(--secondary-color);
     border-radius: 1rem;
