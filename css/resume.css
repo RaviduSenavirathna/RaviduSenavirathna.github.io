@@ -250,5 +250,28 @@
 }
 
 
-/* Breakpoints  */
+
+
+
+/* ============================= */
+/* RESUME BREAKPOINTS */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .resume-box h2,
+    .resume-box .heading,
+    .resume-box .desc,
+    .resume-detail.AboutMe .resume-item {
+        text-align: center;
+    }
+}
 
