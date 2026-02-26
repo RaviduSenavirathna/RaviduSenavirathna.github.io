@@ -275,3 +275,66 @@
     }
 }
 
+
+
+
+/* ============================= */
+/* CERTIFICATE SECTION BREAKPOINTS */
+/* ============================= */
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+
+    .certificate-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .certificate-box img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Large Mobile */
+@media screen and (max-width: 768px) {
+
+    .certificate-container {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-slider {
+        width: 80%;
+        overflow: hidden;
+    }
+
+    .certificate-slide img {
+        width: 60%;
+        height: auto;
+    }
+
+    .certificate-box {
+        padding: 1.5rem;
+    }
+
+    .certificate-box img {
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+
+    .certificate-box img {
+        width: 40%;
+        border-radius: 1rem;
+    }
+
+    .certificate-box h3 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
