@@ -91,73 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
-  /* ===============================
-     CERTIFICATION SLIDER
-  =============================== */
-
-  const initCertificationSlider = () => {
-    const certSlider = document.querySelector('.certification-slider');
-    const certSlides = document.querySelectorAll('.cert-slide');
-    const certRight = document.querySelector('.cert-right');
-    const certLeft = document.querySelector('.cert-left');
-
-    if (!certSlider || !certSlides.length || !certRight || !certLeft) return;
-
-    let certIndex = 0;
-
-    const updateCertSlider = () => {
-      certSlider.style.transform =
-        `translateX(-${certIndex * 100}%)`;
-
-      certLeft.classList.toggle('disabled', certIndex === 0);
-      certRight.classList.toggle(
-        'disabled',
-        certIndex === certSlides.length - 1
-      );
-    };
-
-    updateCertSlider();
-
-    certRight.addEventListener('click', () => {
-      if (certIndex < certSlides.length - 1) {
-        certIndex++;
-        updateCertSlider();
-      }
-    });
-
-    certLeft.addEventListener('click', () => {
-      if (certIndex > 0) {
-        certIndex--;
-        updateCertSlider();
-      }
-    });
-  };
-
-
-  /* ===============================
-     CERT META FADE LOOP
-  =============================== */
-
-  const initCertMetaAnimation = () => {
-    const slides = document.querySelectorAll('.cert-slide');
-
-    if (!slides.length) return;
-
-    slides.forEach(slide => {
-      const year = slide.querySelector('.meta-year');
-      const issuer = slide.querySelector('.meta-issuer');
-
-      if (!year || !issuer) return;
-
-      let showYear = true;
-
-      setInterval(() => {
-        year.classList.toggle('active', showYear);
-        issuer.classList.toggle('active', !showYear);
-        showYear = !showYear;
-      }, 3500);
-    });
-  };
+  /* certification page now uses portfolio slider; extra code removed */
 
 
   /* ===============================
@@ -225,8 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initResumeToggle();
   initPortfolioSlider();
-  initCertificationSlider();
-  initCertMetaAnimation();
   initContactForm();
 
 });
