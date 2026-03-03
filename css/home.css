@@ -1,10 +1,15 @@
-/* Home */
+/* Home Section
+   Layout, typography, buttons, social icons, image, animations and responsive rules.
+*/
+
+/* ---------- Layout ---------- */
 .home {
     display: flex;
     align-items: center;
     gap: 15rem;
 }
 
+/* ---------- Typography ---------- */
 .home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
 }
@@ -23,12 +28,6 @@
     animation-delay: calc(-4s * var(--i));
 }
 
-@keyframes display-text {
-    25%,100% {
-      display: none;
-    }
-}
-
 .home-detail h2 span::before {
     content: attr(data-text);
     position: absolute;
@@ -38,15 +37,6 @@
     white-space: nowrap;
     overflow: hidden;
     animation: fill-text 4s linear infinite;
-}   
-
-@keyframes fill-text {
-    10%,100% {
-        width: 0;
-    }
-    70%,90% {
-        width: 100%;
-    }
 }
 
 .home-detail p {
@@ -54,11 +44,7 @@
     margin: 1rem 0 2.5rem;
 }
 
-.home-detail .btn-sci {
-    display: flex;
-    align-items: center;
-}
-
+/* ---------- Buttons ---------- */
 .btn {
     display: inline-block;
     padding: 1rem 3rem;
@@ -78,7 +64,12 @@
     box-shadow: none;
 }
 
-/* Social Icons */
+/* ---------- Social Icons ---------- */
+.home-detail .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
 .home-detail .btn-sci .sci {
     margin-left: 2rem;
 }
@@ -100,7 +91,7 @@
     box-shadow: 0 0 1rem var(--accent-color);
 }
 
-/* Home Image */
+/* ---------- Image Container ---------- */
 .home-image .img-box {
     position: relative;
     width: 30vw;
@@ -111,7 +102,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}  
+}
 
 .home-image .img-box::before,
 .home-image .img-box::after {
@@ -126,12 +117,6 @@
 
 .home-image .img-box::after {
     animation-delay: -5s;
-}
-
-@keyframes rotate-border {
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 .home-image .img-box .img-item {
@@ -157,9 +142,27 @@
     mix-blend-mode: lighten;
 }
 
+/* ---------- Animations ---------- */
+@keyframes display-text {
+    25%,100% {
+        display: none;
+    }
+}
 
+@keyframes fill-text {
+    10%,100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
 
-
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* ============================= */
 /* HOME BREAKPOINTS */
