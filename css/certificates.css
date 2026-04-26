@@ -1,2 +1,64 @@
 /* certificate page uses portfolio layout, no additional styles needed */
 /* stylesheet retained for potential future overrides but currently empty */
+
+/* ============================= */
+/* Media BREAKPOINTS */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-container .project-box:first-child {
+        order: 1;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .project-box h3 {
+        font-size: 2.5rem;
+    }
+
+    .project-box .numb {
+        font-size: 5rem;
+    }
+
+    .portfolio-carousel {
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .heading {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-box .numb {
+        font-size: 4rem;
+    }
+
+    .project-box h3 {
+        font-size: 2rem;
+        margin: .5rem 0 1.5rem;
+    }
+
+    .project-box p {
+        font-size: 1.4rem;
+    }
+
+    .portfolio-carousel {
+        height: 25rem;
+    }
+
+    .project-box .live-github a {
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+}
