@@ -114,6 +114,10 @@ section {
         display: block;
     }
 
+    section {
+        padding: 15rem 4% 2rem;
+    }
+
     nav {
         position: absolute;
         top: 100%;
