@@ -90,11 +90,11 @@ section {
 
 @media screen and (max-width: 1200px) {
     html {
-        font-size: 55%;
+        font-size: 50%;
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 990px) {
     header {
         padding: 2rem 4%;
     }
@@ -104,11 +104,8 @@ section {
     }
 }
 
-/* ============================= */
-/* NAVIGATION */
-/* ============================= */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 840px) {
 
     #menu-icon {
         display: block;
@@ -138,11 +135,5 @@ section {
     nav a {
         display: block;
         margin: 4rem 0;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    html {
-        font-size: 50%;
     }
 }
